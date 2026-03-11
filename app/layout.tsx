@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Seba BM | Links",
-  description: "Full Stack Developer | Diseñando el futuro digital",
+  description: "Full Stack Developer",
+  icons: {
+    icon: "/favicon_2.png",
+  },
 };
 
 export default function RootLayout({

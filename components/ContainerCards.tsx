@@ -1,5 +1,6 @@
 import styles from "@/components/css/containerCards.module.css";
 import CardLinks from "@/components/CardLinks";
+import CardCopy from "@/components/CardCopy";
 
 const data = [
     {
@@ -31,6 +32,10 @@ export default function ContainerCards() {
                 {data.map((item, index) => (
                     <CardLinks key={index} title={item.title} url={item.url} />
                 ))}
+                <CardCopy
+                    title="Contáctame"
+                    value="sebastian.benavides.m20@gmail.com"
+                />
             </div>
         </section>
     );

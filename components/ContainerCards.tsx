@@ -25,7 +25,7 @@ export default function ContainerCards() {
         <section className={styles.container}>
             <header className={styles.header}>
                 <h1 className={styles.title}>Seba BM</h1>
-                <p className={styles.description}>Full Stack Developer | Diseñando el futuro digital</p>
+                <p className={styles.description}>Desarrollador Fullstack | Estudiante de Ingeniería en Civil en Computación</p>
             </header>
             <div className={styles.linksList}>
                 {data.map((item, index) => (

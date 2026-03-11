@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Laptop } from "lucide-react";
 import styles from "./css/themeToggle.module.css";
 
 export default function ThemeToggle() {
@@ -16,17 +16,21 @@ export default function ThemeToggle() {
 
     if (!mounted) return null;
 
+    const toggleTheme = () => {
+        if (theme === "light") setTheme("dark");
+        else if (theme === "dark") setTheme("system");
+        else setTheme("light");
+    };
+
     return (
         <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={toggleTheme}
             className={`${styles.toggle} glass`}
-            aria-label="Cambiar tema"
+            aria-label={`Cambiar tema (actual: ${theme})`}
         >
-            {theme === "dark" ? (
-                <Moon size={20} className={styles.icon} />
-            ) : (
-                <Sun size={20} className={styles.icon} />
-            )}
+            {theme === "light" && <Sun size={20} className={styles.icon} />}
+            {theme === "dark" && <Moon size={20} className={styles.icon} />}
+            {theme === "system" && <Laptop size={20} className={styles.icon} />}
         </button>
     );
 }

@@ -4,22 +4,26 @@ import CardCopy from "@/components/CardCopy";
 
 const data = [
     {
-        title: "Portfolio",
+        title: "Portafolio",
         url: "https://sebabm.cl",
     },
     {
-        title: "Instagram",
-        url: "https://instagram.com/sebabm.dev",
+        title: "Instagram Fútbol",
+        url: "https://instagram.com/sebabmfutbol",
     },
     {
-        title: "LinkedIn",
-        url: "linkedin.com/in/sebastián-ignacio-benavides-martinez-816017340",
+        title: "BMencial",
+        url: "https://instagram.com/bmencial",
     },
     {
-        title: "GitHub",
-        url: "https://github.com/SebazCode",
-    }
-]
+        title: "TikTok Fútbol",
+        url: "https://tiktok.com/@sebabmfutbol",
+    },
+    {
+        title: "YouTube Fútbol",
+        url: "https://youtube.com/@sebabmfutbol",
+    },
+];
 
 export default function ContainerCards() {
     return (

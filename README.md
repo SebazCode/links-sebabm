@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# links-sebabm
 
-## Getting Started
+Plataforma minimalista y moderna de enlaces personales y profesionales (Link-in-bio), desarrollada con Next.js, React y TypeScript. Incluye soporte para modo oscuro/claro y funcionalidad de copiado rápido al portapapeles.
 
-First, run the development server:
+Link: [links.sebabm.cl](links.sebabm.cl)
+
+---
+
+## Características
+
+- Interfaz moderna con efectos glassmorphism y transiciones suaves.
+- Soporte para cambio de tema dinámico (Claro / Oscuro / Sistema) usando `next-themes`.
+- Botón interactivo con retroalimentación visual para copiar correo de contacto.
+- Diseño responsivo adaptado a dispositivos móviles y de escritorio.
+- Tipografía optimizada con `next/font` (Geist Sans y Geist Mono).
+- Enrutamiento y arquitectura basados en Next.js App Router.
+
+---
+
+## Tecnologías Utilizadas
+
+- **Framework:** Next.js (App Router)
+- **Biblioteca:** React
+- **Lenguaje:** TypeScript (Strict Mode)
+- **Estilos:** CSS Modules y variables CSS personalizadas
+- **Iconos:** Lucide React
+- **Gestión de Temas:** next-themes
+
+---
+
+## Estructura del Proyecto
+
+```text
+links-sebabm/
+├── app/
+│   ├── globals.css          # Estilos globales y variables de tema
+│   ├── layout.tsx           # Layout raíz con configuración de fuentes y temas
+│   ├── not-found.tsx        # Página de error 404 personalizada
+│   └── page.tsx             # Vista principal
+├── components/
+│   ├── css/                 # Módulos de estilos CSS para componentes
+│   ├── CardCopy.tsx         # Componente para copiar datos al portapapeles
+│   ├── CardLinks.tsx        # Componente para enlaces externos
+│   ├── ContainerCards.tsx   # Contenedor principal de tarjetas y enlaces
+│   ├── Footer.tsx           # Pie de página
+│   ├── ThemeProvider.tsx    # Proveedor de contexto para temas
+│   └── ThemeToggle.tsx      # Selector de tema (Light/Dark/System)
+├── public/                  # Recursos estáticos (favicons, imágenes)
+├── next.config.ts           # Configuración de Next.js
+├── package.json             # Dependencias y scripts del proyecto
+└── tsconfig.json            # Configuración de TypeScript
+```
+
+---
+
+## Instalación y Uso Local
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/SebazCode/links-sebabm.git
+```
+
+2. Entrar al directorio del proyecto:
+
+```bash
+cd links-sebabm
+```
+
+3. Instalar las dependencias:
+
+```bash
+npm install
+```
+
+4. Iniciar el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts Disponibles
 
-## Learn More
+- `npm run dev`: Inicia el entorno de desarrollo local.
+- `npm run build`: Genera la compilación optimizada para producción.
+- `npm run start`: Ejecuta el servidor en modo producción.
+- `npm run lint`: Ejecuta el linter ESLint sobre el código base.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Licencia
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pueden usar este proyecto para fines personales, educativos y de referencia. No pueden usarlo para fines comerciales o malintencionados.
